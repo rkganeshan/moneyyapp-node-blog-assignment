@@ -1,0 +1,12 @@
+{
+    "/":"GET : api docs",
+    "/blog":"GET : get all blogs",
+    "/blog/:blogId":"GET : get blog by blog id",
+    "/blog/new":"POST : create a new blog (in request body keys required for creation of new blog are 'title' and 'body')",
+    "/blog/:blogId":"PUT : update blog (in request body keys required for creation of new blog are 'title' and/or 'body')",
+    "/blog/:blogId":"DELETE : delete blog",
+    "/review/new/:blogId":"POST : create a new review for a Blog (in request body key required for creation of new review is 'description')",
+    "/review/:reviewId":"DELETE : delete a review",
+    "/review/:blogId":"GET : get all reviews of a blog by blog id (VIRTUAL POPULATING the REVIEWS)",
+    "link to Postman Collection":"https://www.getpostman.com/collections/755315d7e42d8a92e41c"
+}
