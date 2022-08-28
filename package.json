@@ -1,0 +1,29 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "description": "backend for moneyyapp blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "blog",
+    "moneyyapp"
+  ],
+  "author": "R K Ganeshan",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.3",
+    "nodemon": "^2.0.19",
+    "uuidv4": "^6.2.13"
+  }
+}
