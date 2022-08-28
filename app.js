@@ -2,7 +2,7 @@ const express=require("express");
 const mongoose=require("mongoose");
 const dotenv=require("dotenv");
 const cors=require("cors");
-
+const fs=require("fs");
 
 //configurations
 const app=express();
@@ -21,6 +21,18 @@ const reviewRoutes=require("./routes/review");
 app.use("/blog",blogRoutes);
 app.use("/review",reviewRoutes);
 
+
+//api documentation
+app.get("/",(req,res)=>{
+    fs.readFile("./apiDocs.json",(err,data)=>{
+        if(err)
+        {
+            res.status(400).json({error:err})
+        }
+        const docs=JSON.parse(data);
+        res.status(200).json(docs)
+    })
+})
 
 //connecting to mongo cloud db
 mongoose.connect(process.env.MONGO_URI).then(()=>{
